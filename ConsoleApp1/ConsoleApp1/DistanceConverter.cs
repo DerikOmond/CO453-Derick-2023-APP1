@@ -62,6 +62,7 @@ namespace ConsoleApp1
                 PromptUser(fromUnit, toUnit);
                 InputDistance();
                 ConvertDistance();
+                OutputDistance();
                 TryAgain();
             }
             while (retry = true);
@@ -372,6 +373,11 @@ namespace ConsoleApp1
             {
                 toDistance = fromDistance / INCHES_IN_KILOMETRES;
             }
+        }
+
+        private void OutputDistance()
+        {
+            Console.WriteLine($"\n{fromDistance} {fromUnit} is equivalent to {toDistance} {toUnit}.");
         }
 
         private void TryAgain()
