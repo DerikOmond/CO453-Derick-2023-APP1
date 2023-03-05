@@ -41,6 +41,12 @@ namespace ConsoleApp1
         private int userChoice1;
         private int userChoice2;
 
+        private double fromDistance;
+        private double toDistance;
+
+        private string fromUnit;
+        private string toUnit;
+
         public void Run()
         {
             DisplayHeader();
