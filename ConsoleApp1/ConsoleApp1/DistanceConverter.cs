@@ -47,6 +47,9 @@ namespace ConsoleApp1
         private string fromUnit;
         private string toUnit;
 
+        private bool invalidChoice1 = false;
+        private bool invalidChoice2 = false;
+
         public void Run()
         {
             DisplayHeader();
