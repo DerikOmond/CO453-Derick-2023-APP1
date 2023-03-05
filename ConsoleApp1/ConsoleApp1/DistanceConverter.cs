@@ -155,6 +155,13 @@ namespace ConsoleApp1
 
         }
 
+        private void InvalidChoice()
+        {
+            Console.WriteLine("\nTHAT IS AN INVALID OPTION!!");
+            invalidChoice1 = true;
+            invalidChoice2 = true;
+        }
+
         private bool sameOptionsChecker() 
         {
             if (this.userChoice1 == this.userChoice2)
