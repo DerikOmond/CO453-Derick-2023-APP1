@@ -50,6 +50,8 @@ namespace ConsoleApp1
         private bool invalidChoice1 = false;
         private bool invalidChoice2 = false;
 
+        private bool retry;
+
         public void Run()
         {
             DisplayHeader();
