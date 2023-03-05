@@ -60,6 +60,7 @@ namespace ConsoleApp1
             {
                 UserSelect();
                 PromptUser(fromUnit, toUnit);
+                TryAgain();
             }
             while (true);
         }
@@ -221,6 +222,24 @@ namespace ConsoleApp1
             else
             {
                 return false;
+            }
+        }
+
+        private void TryAgain()
+        {
+            Console.Write("\nWould you like to try again?(enter 'yes', 'ye', 'y' or 'yeah').\n>");
+            string repetition = Console.ReadLine();
+
+            if (repetition.Equals("yes") || repetition.Equals("ye") || repetition.Equals("y") || repetition.Equals("yeah"))
+            {
+                retry = true;
+            }
+            else
+            {
+                retry = false;
+                Console.Write("\nGoodbye...");
+                Console.ReadLine();
+                Environment.Exit(1);
             }
         }
     }
