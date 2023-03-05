@@ -10,12 +10,17 @@ namespace ConsoleApp1
     {
         public void Run()
         {
-
+            DisplayHeader();
         }
 
         public void DisplayHeader()
         {
-
+            Console.WriteLine("\n==========================================================================================");
+            Console.WriteLine("========                         App01 Distance Converter                         ========");
+            Console.WriteLine("========                             By Derick Omondi                             ========");
+            Console.WriteLine("==========================================================================================\n");
+            Console.Write("Press enter to start\n>");
+            Console.ReadLine();
         }
     }
 }
