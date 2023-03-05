@@ -80,7 +80,7 @@ namespace ConsoleApp1
                 FirstUserSelection();
                 SecondUserSelection();
 
-                if(SameOptionsChecker())
+                if(sameOptionsChecker())
                 {
                     Console.WriteLine("\nYOU CANNOT CONVERT FROM THIS UNIT BACK TO ITSELF.\nTRY AGAIN WITH DIFFERENT UNITS.");
                 }
@@ -88,9 +88,66 @@ namespace ConsoleApp1
             while (true);
         }
 
+        private void UserOptions()
+        {
+            Console.WriteLine($"1. {MILES}");
+            Console.WriteLine($"2. {FEET}");
+            Console.WriteLine($"3. {METRES}");
+            Console.WriteLine($"4. {YARDS}");
+            Console.WriteLine($"5. {KILOMETRES}");
+            Console.WriteLine($"6. {INCHES}");
+            Console.WriteLine("");
+            Console.Write("> ");
+        }
+
         private void FirstUserSelection()
         {
+            do
+            {
+                invalidChoice1 = false;
 
+                Console.WriteLine("\nPlease select the number corrosponding to the unit of measurement you would like to convert from. \n");
+                UserOptions();
+                string firstUserChoice = Console.ReadLine();
+                this.userChoice1 = Convert.ToUInt16(firstUserChoice);
+
+                if (userChoice1 == 1)
+                {
+                    fromUnit = MILES;
+                    fromDistance = miles;
+
+                }
+                else if (userChoice1 == 2)
+                {
+                    fromUnit = FEET;
+                    fromDistance = feet;
+                }
+                else if (userChoice1 == 3)
+                {
+                    fromUnit = METRES;
+                    fromDistance = metres;
+                }
+                else if (userChoice1 == 4)
+                {
+                    fromUnit = YARDS;
+                    fromDistance = yards;
+                }
+                else if (userChoice1 == 5)
+                {
+                    fromUnit = KILOMETRES;
+                    fromDistance = kilometres;
+                }
+                else if (userChoice1 == 6)
+                {
+                    fromUnit = INCHES;
+                    fromDistance = inches;
+                }
+                else
+                {
+                    InvalidChoice();
+                }
+            }
+            while (invalidChoice1 == true);
         }
 
         private void SecondUserSelection() 
