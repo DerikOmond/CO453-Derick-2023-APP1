@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class DistanceConverter
+    class DistanceConverter
     {
+        public void Run()
+        {
+
+        }
     }
 }
