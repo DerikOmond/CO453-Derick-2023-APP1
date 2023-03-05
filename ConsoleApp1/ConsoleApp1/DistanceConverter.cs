@@ -14,7 +14,7 @@ namespace ConsoleApp1
 
             do
             {
-
+                UserSelect();
             }
             while (true);
         }
@@ -27,6 +27,21 @@ namespace ConsoleApp1
             Console.WriteLine("==========================================================================================\n");
             Console.Write("Press enter to start\n>");
             Console.ReadLine();
+        }
+
+        private void UserSelect()
+        {
+            do
+            {
+                FirstUserSelection();
+                SecondUserSelection();
+
+                if(SameOptionsChecker())
+                {
+                    Console.WriteLine("\nYOU CANNOT CONVERT FROM THIS UNIT BACK TO ITSELF.\nTRY AGAIN WITH DIFFERENT UNITS.");
+                }
+            }
+            while (true);
         }
     }
 }
