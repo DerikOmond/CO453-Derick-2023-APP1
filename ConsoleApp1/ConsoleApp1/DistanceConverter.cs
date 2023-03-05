@@ -11,6 +11,12 @@ namespace ConsoleApp1
         public void Run()
         {
             DisplayHeader();
+
+            do
+            {
+
+            }
+            while (true);
         }
 
         public void DisplayHeader()
