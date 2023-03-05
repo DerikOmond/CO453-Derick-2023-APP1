@@ -60,9 +60,10 @@ namespace ConsoleApp1
             {
                 UserSelect();
                 PromptUser(fromUnit, toUnit);
+                InputDistance();
                 TryAgain();
             }
-            while (true);
+            while (retry = true);
         }
 
         public void DisplayHeader()
@@ -78,6 +79,15 @@ namespace ConsoleApp1
         private void PromptUser(String unit1, String unit2)
         {
             Console.WriteLine($"\nYou are converting from {unit1} to {unit2}.");
+        }
+
+        private void InputDistance()
+        {
+            Console.Write($"\nEnter the no. of {fromUnit}: ");
+            string userInputNum = Console.ReadLine();
+            this.fromDistance = Convert.ToDouble(userInputNum);
+
+            Console.WriteLine($"\nYou entered {fromDistance} {fromUnit}.");
         }
 
         private void UserSelect()
