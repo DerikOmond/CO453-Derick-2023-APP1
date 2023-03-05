@@ -152,7 +152,51 @@ namespace ConsoleApp1
 
         private void SecondUserSelection() 
         {
+            do
+            {
+                invalidChoice2 = false;
 
+                Console.WriteLine("\nSelect the unit you would like to convert to. \n");
+                UserOptions();
+                string secondUserChoice = Console.ReadLine();
+                this.userChoice2 = Convert.ToUInt16(secondUserChoice);
+
+                if (userChoice2 == 1)
+                {
+                    toUnit = MILES;
+                    toDistance = miles;
+                }
+                else if (userChoice2 == 2)
+                {
+                    toUnit = FEET;
+                    toDistance = feet;
+                }
+                else if (userChoice2 == 3)
+                {
+                    toUnit = METRES;
+                    toDistance = metres;
+                }
+                else if (userChoice2 == 4)
+                {
+                    toUnit = YARDS;
+                    toDistance = yards;
+                }
+                else if (userChoice2 == 5)
+                {
+                    toUnit = KILOMETRES;
+                    toDistance = kilometres;
+                }
+                else if (userChoice2 == 6)
+                {
+                    toUnit = INCHES;
+                    toDistance = inches;
+                }
+                else
+                {
+                    InvalidChoice();
+                }
+            }
+            while (invalidChoice2 == true);
         }
 
         private void InvalidChoice()
