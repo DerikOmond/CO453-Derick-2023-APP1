@@ -8,6 +8,22 @@ namespace ConsoleApp1
 {
     class DistanceConverter
     {
+        private const int FEET_IN_MILES = 5280;
+        private const double METRES_IN_MILES = 1609.34;
+        private const int YARDS_IN_MILES = 1760;
+        private const double KILOMETRES_IN_MILES = 1.60934;
+        private const int INCHES_IN_MILES = 63360;
+        private const double FEET_IN_METRES = 3.28084;
+        private const int FEET_IN_YARDS = 3;
+        private const double FEET_IN_KILOMETRES = 3280.84;
+        private const int INCHES_IN_FEET = 12;
+        private const double METRES_IN_YARDS = 1.09361;
+        private const int METRES_IN_KILOMETRES = 1000;
+        private const double INCHES_IN_METRES = 39.3701;
+        private const double YARDS_IN_KILOMETRES = 1093.61;
+        private const int INCHES_IN_YARDS = 36;
+        private const double INCHES_IN_KILOMETRES = 39379.1;
+
         public void Run()
         {
             DisplayHeader();
