@@ -59,6 +59,7 @@ namespace ConsoleApp1
             do
             {
                 UserSelect();
+                PromptUser(fromUnit, toUnit);
             }
             while (true);
         }
@@ -71,6 +72,11 @@ namespace ConsoleApp1
             Console.WriteLine("==========================================================================================\n");
             Console.Write("Press enter to start\n>");
             Console.ReadLine();
+        }
+
+        private void PromptUser(String unit1, String unit2)
+        {
+            Console.WriteLine($"\nYou are converting from {unit1} to {unit2}.");
         }
 
         private void UserSelect()
