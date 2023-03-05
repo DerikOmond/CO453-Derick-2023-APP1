@@ -61,6 +61,7 @@ namespace ConsoleApp1
                 UserSelect();
                 PromptUser(fromUnit, toUnit);
                 InputDistance();
+                ConvertDistance();
                 TryAgain();
             }
             while (retry = true);
@@ -232,6 +233,144 @@ namespace ConsoleApp1
             else
             {
                 return false;
+            }
+        }
+
+        private void ConvertDistance()
+        {
+            if (fromUnit == MILES && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_MILES;
+            }
+            else if (fromUnit == FEET && toUnit == MILES)
+            {
+                toDistance = fromDistance / FEET_IN_MILES;
+            }
+
+            else if (fromUnit == MILES && toUnit == METRES)
+            {
+                toDistance = fromDistance * METRES_IN_MILES;
+            }
+            else if (fromUnit == METRES && toUnit == MILES)
+            {
+                toDistance = fromDistance / METRES_IN_MILES;
+            }
+
+            else if (fromUnit == MILES && toUnit == YARDS)
+            {
+                toDistance = fromDistance * YARDS_IN_MILES;
+            }
+            else if (fromUnit == YARDS && toUnit == MILES)
+            {
+                toDistance = fromDistance / YARDS_IN_MILES;
+            }
+
+            else if (fromUnit == MILES && toUnit == KILOMETRES)
+            {
+                toDistance = fromDistance * KILOMETRES_IN_MILES;
+            }
+            else if (fromUnit == KILOMETRES && toUnit == MILES)
+            {
+                toDistance = fromDistance / KILOMETRES_IN_MILES;
+            }
+
+            else if (fromUnit == MILES && toUnit == INCHES)
+            {
+                toDistance = fromDistance * INCHES_IN_MILES;
+            }
+            else if (fromUnit == INCHES && toUnit == MILES)
+            {
+                toDistance = fromDistance / INCHES_IN_MILES;
+            }
+
+            else if (fromUnit == METRES && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_METRES;
+            }
+            else if (fromUnit == FEET && toUnit == METRES)
+            {
+                toDistance = fromDistance / FEET_IN_METRES;
+            }
+
+            else if (fromUnit == YARDS && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_YARDS;
+            }
+            else if (fromUnit == FEET && toUnit == YARDS)
+            {
+                toDistance = fromDistance / FEET_IN_YARDS;
+            }
+
+            else if (fromUnit == KILOMETRES && toUnit == FEET)
+            {
+                toDistance = fromDistance * FEET_IN_KILOMETRES;
+            }
+            else if (fromUnit == FEET && toUnit == KILOMETRES)
+            {
+                toDistance = fromDistance / FEET_IN_KILOMETRES;
+            }
+
+            else if (fromUnit == FEET && toUnit == INCHES)
+            {
+                toDistance = fromDistance * INCHES_IN_FEET;
+            }
+            else if (fromUnit == INCHES && toUnit == FEET)
+            {
+                toDistance = fromDistance / INCHES_IN_FEET;
+            }
+
+            else if (fromUnit == YARDS && toUnit == METRES)
+            {
+                toDistance = fromDistance / METRES_IN_YARDS;
+            }
+            else if (fromUnit == METRES && toUnit == YARDS)
+            {
+                toDistance = fromDistance * METRES_IN_YARDS;
+            }
+
+            else if (fromUnit == METRES && toUnit == KILOMETRES)
+            {
+                toDistance = fromDistance * METRES_IN_KILOMETRES;
+            }
+            else if (fromUnit == KILOMETRES && toUnit == METRES)
+            {
+                toDistance = fromDistance / METRES_IN_KILOMETRES;
+            }
+
+            else if (fromUnit == METRES && toUnit == INCHES)
+            {
+                toDistance = fromDistance * INCHES_IN_METRES;
+            }
+            else if (fromUnit == INCHES && toUnit == METRES)
+            {
+                toDistance = fromDistance / INCHES_IN_METRES;
+            }
+
+            else if (fromUnit == YARDS && toUnit == KILOMETRES)
+            {
+                toDistance = fromDistance / YARDS_IN_KILOMETRES;
+            }
+            else if (fromUnit == KILOMETRES && toUnit == YARDS)
+            {
+                toDistance = fromDistance * YARDS_IN_KILOMETRES;
+            }
+
+            else if (fromUnit == YARDS && toUnit == INCHES)
+            {
+                toDistance = fromDistance * INCHES_IN_YARDS;
+            }
+            else if (fromUnit == INCHES && toUnit == YARDS)
+            {
+                toDistance = fromDistance / INCHES_IN_YARDS;
+            }
+
+            else if (fromUnit == KILOMETRES && toUnit == INCHES)
+            {
+                toDistance = fromDistance * INCHES_IN_KILOMETRES;
+            }
+            else if (fromUnit == INCHES && toUnit == KILOMETRES)
+            {
+                toDistance = fromDistance / INCHES_IN_KILOMETRES;
             }
         }
 
