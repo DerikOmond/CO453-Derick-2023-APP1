@@ -104,7 +104,7 @@ namespace ConsoleApp1
                     Console.WriteLine("\nYOU CANNOT CONVERT FROM THIS UNIT BACK TO ITSELF.\nTRY AGAIN WITH DIFFERENT UNITS.");
                 }
             }
-            while (true);
+            while (sameOptionsChecker());
         }
 
         private void UserOptions()
