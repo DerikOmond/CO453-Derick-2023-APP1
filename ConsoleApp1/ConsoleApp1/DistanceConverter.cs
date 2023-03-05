@@ -43,5 +43,27 @@ namespace ConsoleApp1
             }
             while (true);
         }
+
+        private void FirstUserSelection()
+        {
+
+        }
+
+        private void SecondUserSelection() 
+        {
+
+        }
+
+        private bool sameOptionsChecker() 
+        {
+            if (this.userChoice1 == this.userChoice2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
