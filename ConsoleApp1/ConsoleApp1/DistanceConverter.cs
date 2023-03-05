@@ -24,6 +24,13 @@ namespace ConsoleApp1
         private const int INCHES_IN_YARDS = 36;
         private const double INCHES_IN_KILOMETRES = 39379.1;
 
+        private const string MILES = "miles";
+        private const string FEET = "feet";
+        private const string METRES = "metres";
+        private const string YARDS = "yards";
+        private const string KILOMETRES = "kilometres";
+        private const string INCHES = "inches";
+
         public void Run()
         {
             DisplayHeader();
