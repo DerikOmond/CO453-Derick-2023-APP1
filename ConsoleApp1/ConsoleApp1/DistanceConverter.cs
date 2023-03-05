@@ -31,6 +31,13 @@ namespace ConsoleApp1
         private const string KILOMETRES = "kilometres";
         private const string INCHES = "inches";
 
+        private double miles;
+        private double feet;
+        private double metres;
+        private double yards;
+        private double kilometres;
+        private double inches;
+
         public void Run()
         {
             DisplayHeader();
