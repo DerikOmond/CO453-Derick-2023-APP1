@@ -38,6 +38,9 @@ namespace ConsoleApp1
         private double kilometres;
         private double inches;
 
+        private int userChoice1;
+        private int userChoice2;
+
         public void Run()
         {
             DisplayHeader();
