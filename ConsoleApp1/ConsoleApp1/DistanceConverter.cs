@@ -1,4 +1,13 @@
-﻿using System;
+﻿/// <summary>
+/// This application has been designed to allow a user to input a value in a selection
+/// of SI units they can choose from and convert it to another.
+/// </summary>
+/// <author>
+/// Derick Omondi version 1.0
+/// </author>
+
+//Dependancies
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +15,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    //Class
     class DistanceConverter
     {
+        //All of conversion factors required between each combination of units.
         private const int FEET_IN_MILES = 5280;
         private const double METRES_IN_MILES = 1609.34;
         private const int YARDS_IN_MILES = 1760;
@@ -24,6 +35,7 @@ namespace ConsoleApp1
         private const int INCHES_IN_YARDS = 36;
         private const double INCHES_IN_KILOMETRES = 39379.1;
 
+        //Repeatedly used strings that change according to user decisions.
         private const string MILES = "miles";
         private const string FEET = "feet";
         private const string METRES = "metres";
@@ -31,6 +43,7 @@ namespace ConsoleApp1
         private const string KILOMETRES = "kilometres";
         private const string INCHES = "inches";
 
+        //Attributes that adopt values according to user decision and input.
         private double miles;
         private double feet;
         private double metres;
@@ -38,20 +51,26 @@ namespace ConsoleApp1
         private double kilometres;
         private double inches;
 
+        //Range of choices available to the user.
         private int userChoice1;
         private int userChoice2;
 
+        //Value and units the user wishes to convert.
         private double fromDistance;
         private double toDistance;
 
+        //New values and units from the previous distance and units chosen.
         private string fromUnit;
         private string toUnit;
 
+        //Choices that are not allowed in the program.
         private bool invalidChoice1 = false;
         private bool invalidChoice2 = false;
 
+        //Option to begin the program all over again.
         private bool retry;
 
+        //Sole public method used to start the program.
         public void Run()
         {
             DisplayHeader();
@@ -68,21 +87,26 @@ namespace ConsoleApp1
             while (retry = true);
         }
 
+        //Method for displaying the name of the program, author and brief explination of what  the program does.
         public void DisplayHeader()
         {
             Console.WriteLine("\n==========================================================================================");
             Console.WriteLine("========                         App01 Distance Converter                         ========");
             Console.WriteLine("========                             By Derick Omondi                             ========");
             Console.WriteLine("==========================================================================================\n");
-            Console.Write("Press enter to start\n>");
+            Console.WriteLine("\nThis console application allows a user to input a value in one of the 6 suggested units and\n convert" +
+                " it into one of the other 5 options.\n");
+            Console.Write("\nPress enter to start\n>");
             Console.ReadLine();
         }
 
+        //Method used to give the user an idea of what they're converting.
         private void PromptUser(String unit1, String unit2)
         {
             Console.WriteLine($"\nYou are converting from {unit1} to {unit2}.");
         }
 
+        //Method for taking the user's input and appling it to the attribute.
         private void InputDistance()
         {
             Console.Write($"\nEnter the no. of {fromUnit}: ");
@@ -92,6 +116,8 @@ namespace ConsoleApp1
             Console.WriteLine($"\nYou entered {fromDistance} {fromUnit}.");
         }
 
+        //Method used to take the user through the whole selection process
+        //This goes through the initial and final units.
         private void UserSelect()
         {
             do
@@ -107,6 +133,7 @@ namespace ConsoleApp1
             while (sameOptionsChecker());
         }
 
+        //Method displaying all unit options.
         private void UserOptions()
         {
             Console.WriteLine($"1. {MILES}");
@@ -119,6 +146,7 @@ namespace ConsoleApp1
             Console.Write("> ");
         }
 
+        //Initial selection process that assigns values for the previous units and distance value
         private void FirstUserSelection()
         {
             do
@@ -169,6 +197,7 @@ namespace ConsoleApp1
             while (invalidChoice1 == true);
         }
 
+        //Second part of the selection process in which assigns the final units and distance value to be displayed.
         private void SecondUserSelection() 
         {
             do
@@ -218,6 +247,7 @@ namespace ConsoleApp1
             while (invalidChoice2 == true);
         }
 
+        //Method that displayes error message when user inputs a value not stated to be available.
         private void InvalidChoice()
         {
             Console.WriteLine("\nTHAT IS AN INVALID OPTION!!");
@@ -225,6 +255,7 @@ namespace ConsoleApp1
             invalidChoice2 = true;
         }
 
+        //boolean method for checking whether the user has selected the same unit twice.
         private bool sameOptionsChecker() 
         {
             if (this.userChoice1 == this.userChoice2)
@@ -237,6 +268,8 @@ namespace ConsoleApp1
             }
         }
 
+        //Calculations that take place under certain conditions
+        //Those condition depend on the values the user wants to convert between.
         private void ConvertDistance()
         {
             if (fromUnit == MILES && toUnit == FEET)
@@ -375,11 +408,13 @@ namespace ConsoleApp1
             }
         }
 
+        //Displays the original converted to the new units.
         private void OutputDistance()
         {
             Console.WriteLine($"\n{fromDistance} {fromUnit} is equivalent to {toDistance} {toUnit}.");
         }
 
+        //Option to restart the program from the selection process.
         private void TryAgain()
         {
             Console.Write("\nWould you like to try again?(enter 'yes', 'ye', 'y' or 'yeah').\n>");
